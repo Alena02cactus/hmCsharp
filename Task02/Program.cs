@@ -13,6 +13,7 @@ if (number1 > number2)
 {
     Console.WriteLine($"max = {number1}");
 }
-else{
+else
+{
     Console.WriteLine($"max = {number2}");
 }
