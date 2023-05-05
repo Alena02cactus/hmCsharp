@@ -7,3 +7,19 @@
 // 3 | 27
 // 4 | 64
 // 5 | 125
+
+
+void TableAllKubes(int num)
+{
+    int index = 1;
+    while (index <= num)
+    {
+        Console.WriteLine($"{index, 3}  {index * index * index, 4}");
+        index++;
+    }
+}
+
+Console.WriteLine("Please enter your number: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+TableAllKubes(number);
