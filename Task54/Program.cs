@@ -36,3 +36,27 @@ void PrintMatrix (int[,] matrix)
     }
 }
 
+void SortRowsMin(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1) - 1; j++)
+        {
+            for (int k = j + 1; k < matrix.GetLength(1) ; k++)
+            {
+                if (matrix[i, k] > matrix[i, j])
+                {
+                    int temp = matrix[i, j];
+                    matrix[i, j] = matrix[i, k];
+                    matrix[i, k] = temp;
+                }
+            }
+        }
+    }
+}
+
+int[,] rndMatrix = CreateMatrixRndInt(4, 4, 0, 10);
+PrintMatrix(rndMatrix);
+Console.WriteLine();
+SortRowsMin(rndMatrix);
+PrintMatrix(rndMatrix);
