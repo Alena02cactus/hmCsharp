@@ -4,15 +4,23 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
+
 Console.WriteLine("Введите целое положительное число");
 int number = Convert.ToInt32(Console.ReadLine());
-
-NaturalNumbers(number); 
-
-void NaturalNumbers(int num) 
+if (number < 0)
 {
-    if(num == 0) return;
-    Console.Write($"{num}, ");
-    NaturalNumbers ( num - 1);
-    
+    Console.Write("введено неверное число");
+
+}
+else
+{
+    NaturalNumbers(number);
+
+    void NaturalNumbers(int num)
+    {
+        if (num == 0) return;
+        Console.Write($"{num}, ");
+        NaturalNumbers(num - 1);
+
+    }
 }
